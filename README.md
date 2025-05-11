@@ -16,7 +16,7 @@ This package provides an incredibly simple comment system for your Laravel appli
 You can install the package via Composer:
 
 ```bash
-composer require ryangjchandler/laravel-comments
+composer require cswni/laravel-comments
 ```
 
 The package automatically registers migrations so there's no need to publish anything, just run them.
