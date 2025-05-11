@@ -36,4 +36,8 @@ class Comment extends Model implements IsComment
     {
         return $this->hasMany(static::class, 'parent_id');
     }
+
+    public function replies(): HasMany{
+        return $this->hasMany(static::class, 'parent_id')->with('user');
+    }
 }

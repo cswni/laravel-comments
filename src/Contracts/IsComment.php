@@ -18,4 +18,5 @@ interface IsComment
     public function children(): HasMany;
 
     public function user(): BelongsTo;
+    public function replies(): HasMany;
 }
