@@ -15,7 +15,9 @@ trait HasComments
     /** @return MorphMany<IsComment> */
     public function comments(): MorphMany
     {
-        return $this->morphMany(config('comments.model'), 'commentable')->with('user');
+        return $this->morphMany(config('comments.model'), 'commentable')
+            ->orderByDesc('created_at')
+            ->with('user');
     }
 
     public function comment(string $content, Model $user = null, IsComment $parent = null): IsComment
